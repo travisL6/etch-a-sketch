@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Etch-a-Sketch</h1>
+    </header>
+    <main class="main">
+        <div class="settings">
+            <input id="colorPicker" type="color" value="#333333" />
+            <button id="eraserBtn">Eraser</button>
+            <button id="clearBtn">Clear</button>
+        </div>
+        <div id="grid" class="grid"></div>
+    </main>
+    <footer class="footer">
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            Travis Lambert
+        </p>
+        <a href="https://github.com/travisL6" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
