@@ -20,27 +20,19 @@ function setCurrentSize(newSize) {
 }
 
 const colorPicker = document.getElementById('colorPicker')
+const colorBtn = document.getElementById('colorBtn')
 const eraserBtn = document.getElementById('eraserBtn')
 const clearBtn = document.getElementById('clearBtn')
 const grid = document.getElementById('grid')
 
 colorPicker.oninput = (e) => setCurrentColor(e.target.value)
+colorBtn.onclick = () => setCurrentMode('color')
 eraserBtn.onclick = () => setCurrentMode('eraser')
 clearBtn.onclick = () => reloadGrid()
 
 let mouseDown = false
 document.body.onmousedown = () => (mouseDown = true)
 document.body.onmouseup = () => (mouseDown = false)
-
-function changeSize(value) {
-    setCurrentSize(value)
-    updateSizeValue(value)
-    reloadGrid()
-}
-
-function updateSizeValue(value) {
-    sizeValue.innerHTML = `${value} x ${value}`
-}
 
 function reloadGrid() {
     clearGrid()
